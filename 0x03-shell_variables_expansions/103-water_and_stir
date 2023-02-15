@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%o\n" $(( $((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 01234))) )) | tr behlnort shtbeolhc
+echo $(( (5#${WATER//[w,a,t,e,r]/0}) + (5#${STIR//[s,t,i,r,.]/0}) )) | tr '0123456789ABC' 'behlnortsc'
